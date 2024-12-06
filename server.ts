@@ -1,8 +1,10 @@
-require('dotenv').config();
-const express = require('express');
-const path = require('path');
-const { fetchMessages } = require('./src/lib/fetchMessages');
-const { setupRabbitMQ } = require('./src/lib/rabbitmq');
+import dotenv from 'dotenv';
+import express from 'express';
+import path from 'path';
+import { fetchMessages } from './src/lib/fetchMessages';
+import { setupRabbitMQ } from './src/lib/rabbitmq';
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
